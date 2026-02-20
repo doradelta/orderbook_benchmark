@@ -1,0 +1,209 @@
+   0.012497951s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1771577989.000000000s > 1771577988.928157848s "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.21"
+   0.012624261s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint: stale: changed "/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/build/serde_core-bc8da28f52ebc7db/out/private.rs"
+   0.012626751s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint:           (vs) "/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/serde_core-f040ce1c1daba6c3/dep-lib-serde_core"
+   0.012628329s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 1771577988, nanos: 0 } < FileTime { seconds: 1771577989, nanos: 844194051 }
+   0.012664699s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint: dependency on `build_script_build` is newer than we are 1771577989.000000000s > 1771577988.888156267s "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.21"
+   0.012705071s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint: fingerprint error for orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment)/Check { test: false }/TargetInner { name: "benchmark", doc: true, ..: with_path("/home/dorayaki/Desktop/tech assignment/tech assignment/src/bench.rs", Edition2021) }
+   0.012710260s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/orderbook_system-2f5b5402000df5e4/bin-benchmark`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+   0.052115002s  INFO prepare_target{force=false package_id=crossbeam-channel v0.5.15 target="crossbeam_channel"}: cargo::core::compiler::fingerprint: fingerprint dirty for crossbeam-channel v0.5.15/Check { test: false }/TargetInner { ..: lib_target("crossbeam_channel", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.15/src/lib.rs", Edition2021) }
+   0.052124718s  INFO prepare_target{force=false package_id=crossbeam-channel v0.5.15 target="crossbeam_channel"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "crossbeam_utils" })
+   0.052324003s  INFO prepare_target{force=false package_id=crossbeam-utils v0.8.21 target="crossbeam_utils"}: cargo::core::compiler::fingerprint: fingerprint dirty for crossbeam-utils v0.8.21/Check { test: false }/TargetInner { ..: lib_target("crossbeam_utils", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.21/src/lib.rs", Edition2021) }
+   0.052328789s  INFO prepare_target{force=false package_id=crossbeam-utils v0.8.21 target="crossbeam_utils"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDependency { name: "build_script_build", dep_mtime: FileTime { seconds: 1771577989, nanos: 0 }, max_mtime: FileTime { seconds: 1771577988, nanos: 928157848 } })
+   0.052510926s  INFO prepare_target{force=false package_id=quanta v0.12.6 target="quanta"}: cargo::core::compiler::fingerprint: fingerprint dirty for quanta v0.12.6/Check { test: false }/TargetInner { benched: false, ..: lib_target("quanta", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/quanta-0.12.6/src/lib.rs", Edition2021) }
+   0.052514679s  INFO prepare_target{force=false package_id=quanta v0.12.6 target="quanta"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "crossbeam_utils" })
+   0.052632128s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint dirty for serde_json v1.0.149/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.149/src/lib.rs", Edition2021) }
+   0.052635500s  INFO prepare_target{force=false package_id=serde_json v1.0.149 target="serde_json"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDepFingerprint { name: "serde_core" })
+   0.052730212s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint dirty for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.228/src/lib.rs", Edition2021) }
+   0.052733187s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/serde_core-f040ce1c1daba6c3/dep-lib-serde_core", reference_mtime: FileTime { seconds: 1771577988, nanos: 0 }, stale: "/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/build/serde_core-bc8da28f52ebc7db/out/private.rs", stale_mtime: FileTime { seconds: 1771577989, nanos: 844194051 } }))
+   0.052877324s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint dirty for zmij v1.0.21/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "/home/dorayaki/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.21/src/lib.rs", Edition2021) }
+   0.052880425s  INFO prepare_target{force=false package_id=zmij v1.0.21 target="zmij"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleDependency { name: "build_script_build", dep_mtime: FileTime { seconds: 1771577989, nanos: 0 }, max_mtime: FileTime { seconds: 1771577988, nanos: 888156267 } })
+   0.052982015s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint: fingerprint error for orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment)/Check { test: true }/TargetInner { name: "benchmark", doc: true, ..: with_path("/home/dorayaki/Desktop/tech assignment/tech assignment/src/bench.rs", Edition2021) }
+   0.052985836s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="benchmark"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/orderbook_system-8468fe407f91db11/test-bin-benchmark`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+   0.053123148s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="orderbook_system"}: cargo::core::compiler::fingerprint: fingerprint error for orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment)/Check { test: false }/TargetInner { name: "orderbook_system", doc: true, ..: with_path("/home/dorayaki/Desktop/tech assignment/tech assignment/src/main.rs", Edition2021) }
+   0.053126464s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="orderbook_system"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/orderbook_system-5930852511c2b929/bin-orderbook_system`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+   0.053252704s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="orderbook_system"}: cargo::core::compiler::fingerprint: fingerprint error for orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment)/Check { test: true }/TargetInner { name: "orderbook_system", doc: true, ..: with_path("/home/dorayaki/Desktop/tech assignment/tech assignment/src/main.rs", Edition2021) }
+   0.053255787s  INFO prepare_target{force=false package_id=orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment) target="orderbook_system"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/dorayaki/Desktop/tech assignment/tech assignment/target/debug/.fingerprint/orderbook_system-73c8186b22ae9450/test-bin-orderbook_system`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ed61e7d7e242494fb7057f2657300d9e77bb4fcb/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+    Checking crossbeam-utils v0.8.21
+    Checking zmij v1.0.21
+    Checking serde_core v1.0.228
+    Checking quanta v0.12.6
+    Checking crossbeam-channel v0.5.15
+    Checking serde_json v1.0.149
+    Checking orderbook_system v0.1.0 (/home/dorayaki/Desktop/tech assignment/tech assignment)
+error: could not compile `orderbook_system` (bin "benchmark" test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `orderbook_system` (bin "benchmark") due to 1 previous error
+error: could not compile `orderbook_system` (bin "orderbook_system") due to 25 previous errors; 1 warning emitted
+error: could not compile `orderbook_system` (bin "orderbook_system" test) due to 69 previous errors; 1 warning emitted

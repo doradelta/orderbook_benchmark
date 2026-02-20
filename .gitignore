@@ -1,0 +1,18 @@
+# ── Rust ──
+rust/target/
+
+# ── C++ ──
+cpp/build/
+
+# ── Benchmark reports (generated) ──
+BENCHMARK_COMPARISON.txt
+BENCHMARK_REPORT.txt
+
+# ── OS junk ──
+.DS_Store
+Thumbs.db
+
+# ── Editor ──
+.vscode/
+*.swp
+*~
