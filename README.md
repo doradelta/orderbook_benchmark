@@ -87,17 +87,19 @@ Both implementations produce identical output:
 
 ![Rust vs C++ Benchmark Comparison](benchmark_comparison.png)
 
-Run `make compare` to get a 100-iteration averaged comparison. Example results:
+Run `make compare` to get a 100-iteration averaged comparison. Results (100 iterations each):
 
-| Metric | Rust | C++ | Winner |
-|---|---|---|---|
-| Engine throughput | ~29M updates/s | ~16M updates/s | Rust |
-| Per-update latency | ~35 ns | ~63 ns | Rust |
-| Channel median latency | ~16 µs | ~179 ns | C++ |
-| Channel P99 latency | ~46 µs | ~840 ns | C++ |
+| Metric | Rust | C++ | Winner | Why |
+|---|---|---|---|---|
+| CSV Parse Throughput | 7.55M/s | 7.42M/s | Rust | Higher = better |
+| Engine Throughput | 27.7M/s | 21.3M/s | Rust | Higher = better |
+| E2E Throughput | 19.3M/s | 14.0M/s | Rust | Higher = better |
+| Per-Update Latency | 36 ns | 47 ns | Rust | Lower = better |
+| Channel Median Latency | 23.2 µs | 11.6 µs | C++ | Lower = better |
+| Channel P99 Latency | 42.4 µs | 45.2 µs | Rust | Lower = better |
 
-> C++ wins on channel latency thanks to its custom lock-free SPSC queue (spin-wait with `_mm_pause`).
-> Rust wins on raw engine speed thanks to `BTreeMap`'s cache-friendly B-tree layout and LTO optimizations.
+> **Rust wins 5/6 metrics.** C++ wins on channel median latency thanks to its custom lock-free SPSC queue (spin-wait with `_mm_pause`), while Rust uses the more general-purpose `crossbeam-channel` (MPMC used as SPSC).
+> Rust wins on raw engine speed thanks to `BTreeMap`'s cache-friendly B-tree layout and aggressive LTO optimizations.
 
 Run `make benchmark` to reproduce on your hardware.
 
